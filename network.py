@@ -4,6 +4,7 @@ print("importing the required modules")
 import os
 import shutil
 import random
+import numpy as np
 import keras
 from keras import backend as K
 from keras.models import Sequential
@@ -14,6 +15,7 @@ from keras.layers import MaxPooling2D
 from keras.layers import Flatten
 from keras.layers import Dense
 from keras.layers import Dropout
+from keras.layers import Reshape
 from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
 
@@ -70,17 +72,18 @@ test_datagen = ImageDataGenerator(rescale = 1./255)
 train_generator = train_datagen.flow_from_directory('data/train', 
                                                     target_size = (140, 140), 
                                                     batch_size = 10,
-                                                    class_mode = 'binary')
+                                                    )
 
 validation_generator = validate_datagen.flow_from_directory('data/validation',
                                                       target_size = (140, 140),
                                                       batch_size = 10,
-                                                      class_mode = 'binary')
+                                                      )
 
 test_generator = test_datagen.flow_from_directory('data/test', 
                                                   target_size = (140, 140),
                                                   batch_size = 10,
-                                                  class_mode = 'binary')
+                                                  )
+
 
 
 #---------------------------Construct the network-------------------------------#
@@ -112,12 +115,14 @@ network.add(Dense(64))
 network.add(Activation('relu'))
 network.add(Dropout(0.5))
 
-network.add(Dense(22))
+
+network.add(Dense(23))
 network.add(Activation('softmax'))
 
 network.compile(loss = 'categorical_crossentropy', 
                 optimizer = 'rmsprop',
                 metrics = ['accuracy'])
+print(network.summary())
 
 #---------------------------Training the network-------------------------------#
 print("")
