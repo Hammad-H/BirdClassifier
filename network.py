@@ -18,6 +18,7 @@ from keras.layers import Dropout
 from keras.layers import Reshape
 from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
+import matplotlib.pyplot as plt
 
 
 
@@ -122,17 +123,46 @@ network.add(Activation('softmax'))
 network.compile(loss = 'categorical_crossentropy', 
                 optimizer = 'rmsprop',
                 metrics = ['accuracy'])
-print(network.summary())
+
 
 #---------------------------Training the network-------------------------------#
 print("")
 print("training network")
-hist = network.fit_generator(train_generator, 
+model = network.fit_generator(train_generator, 
                             steps_per_epoch = int(34155/10),
                             epochs = 20,
                             validation_data = validation_generator,
                             validation_steps = int(4267/10))
 
 #---------------------------Saving the network---------------------------------#
-model.save_weights('classifier_weights.h5')
-model.save('classifier.h5')
+network.save_weights('classifier_weights.h5')
+network.save('classifier.h5')
+
+
+#---------------------------Testing the network-------------------------------#
+print("testing the network")
+
+results = network.evaluate_generator(test_generator, verbose = 1)
+
+#--------------------------Plotting Accuracy and Loss---------------------------#
+
+fig = plt.figure(figsize = (9, 3.5))
+fig.suptitle('Bird Classifier training performace on all_years_140x140 data')
+
+ax1 = fig.add_subplot(1, 2, 1)
+ax1.plot(model.history['loss'], label = 'Training loss')
+ax1.plot(model.history['val_loss'], label = 'Validation loss')
+ax1.set_title('Training/Validation Loss')
+ax1.set(ylabel = 'Loss')
+ax1.set(xlabel = 'Epoch')
+ax1.legend()
+
+ax2 = fig.add_subplot(1, 2, 2)
+ax2.plot(model.history['acc'], label = 'Training accuracy')
+ax2.plot(model.history['val_acc'], lable = 'Validation accuracy')
+ax2.set_title('Training/Validation Accuracy')
+ax2.set(ylabel = 'Accuracy')
+ax2.set(xlabel = 'Epoch')
+ax2.legend()
+
+plt.show
