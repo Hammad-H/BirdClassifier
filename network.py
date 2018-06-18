@@ -24,10 +24,10 @@ import matplotlib.pyplot as plt
 #---------------------------Loading the data---------------------------------------#
 print("")
 print("loading the data")
-files = os.listdir("data/train")
-print(files)
-if os.path.isfile("data/train//DS_Store"):
-  print("fuck")
+categories = os.listdir("data/train")
+#delete the .DS_store and other such labels
+del categories[1]
+del categories[0]
 
 
 train_datagen = ImageDataGenerator(rescale=1./255,
@@ -42,21 +42,24 @@ test_datagen = ImageDataGenerator(rescale = 1./255)
 train_generator = train_datagen.flow_from_directory('data/train', 
                                                     target_size = (140, 140), 
                                                     batch_size = 10,
-                                                    class_mode = 'categorical')
+                                                    class_mode = 'categorical',
+                                                    classes = categories)
 
 validation_generator = validate_datagen.flow_from_directory('data/validation',
                                                       target_size = (140, 140),
                                                       batch_size = 10,
-                                                      class_mode = 'categorical')
+                                                      class_mode = 'categorical',
+                                                      classes = categories)
 
 test_generator = test_datagen.flow_from_directory('data/test', 
                                                   target_size = (140, 140),
                                                   batch_size = 10,
-                                                  class_mode = 'categorical')
+                                                  class_mode = 'categorical',
+                                                  classes = categories)
 
 
 
-print(train_generator.class_indices)
+
 
 #---------------------------Construct the network-------------------------------#
 print("")
@@ -88,7 +91,7 @@ network.add(Activation('relu'))
 network.add(Dropout(0.5))
 
 
-network.add(Dense(24))
+network.add(Dense(22))
 network.add(Activation('softmax'))
 
 network.compile(loss = 'categorical_crossentropy', 
