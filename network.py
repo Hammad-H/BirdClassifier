@@ -1,6 +1,8 @@
 #----------------------------import required modules--------------------------#
 print("importing the required modules")
 
+import os
+import shutil
 import numpy as np
 import keras
 from keras import backend as K
@@ -22,6 +24,11 @@ import matplotlib.pyplot as plt
 #---------------------------Loading the data---------------------------------------#
 print("")
 print("loading the data")
+files = os.listdir("data/train")
+print(files)
+if os.path.isfile("data/train//DS_Store"):
+  print("fuck")
+
 
 train_datagen = ImageDataGenerator(rescale=1./255,
                                    shear_range=0.2,
@@ -48,6 +55,8 @@ test_generator = test_datagen.flow_from_directory('data/test',
                                                   class_mode = 'categorical')
 
 
+
+print(train_generator.class_indices)
 
 #---------------------------Construct the network-------------------------------#
 print("")
@@ -79,7 +88,7 @@ network.add(Activation('relu'))
 network.add(Dropout(0.5))
 
 
-network.add(Dense(23))
+network.add(Dense(24))
 network.add(Activation('softmax'))
 
 network.compile(loss = 'categorical_crossentropy', 
