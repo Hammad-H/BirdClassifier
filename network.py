@@ -6,6 +6,7 @@ import shutil
 import numpy as np
 import keras
 from keras import backend as K
+from keras import optimizers
 from keras.models import Sequential
 from keras.models import load_model
 from keras.layers import Conv2D
@@ -25,9 +26,9 @@ import matplotlib.pyplot as plt
 print("")
 print("loading the data")
 categories = os.listdir("data/train")
-#delete the .DS_store and other such labels
-del categories[1]
-del categories[0]
+#ensure tha the hiddenfiles such as .DS_store are not considered categories.
+while len(categories) != 10:
+  del categories[0]
 
 
 train_datagen = ImageDataGenerator(rescale=1./255,
@@ -91,11 +92,12 @@ network.add(Activation('relu'))
 network.add(Dropout(0.5))
 
 
-network.add(Dense(22))
+network.add(Dense(10))
 network.add(Activation('softmax'))
+optim = optimizers.rmsprop(lr = 0.0001, decay = 1e-6)
 
 network.compile(loss = 'categorical_crossentropy', 
-                optimizer = 'rmsprop',
+                optimizer = optim,
                 metrics = ['accuracy'])
 
 
@@ -104,7 +106,7 @@ print("")
 print("training the network")
 model = network.fit_generator(train_generator, 
                             steps_per_epoch = int(34155/10),
-                            epochs = 20,
+                            epochs = 100,
                             validation_data = validation_generator,
                             validation_steps = int(4267/10))
 
@@ -116,7 +118,7 @@ network.save('classifier.h5')
 #---------------------------Testing the network-------------------------------#
 print("testing the network")
 
-results = network.evaluate_generator(test_generator, verbose = 1)
+results = network.evaluate_generator(test_generator)
 
 #--------------------------Plotting Accuracy and Loss---------------------------#
 
