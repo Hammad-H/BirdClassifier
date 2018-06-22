@@ -7,6 +7,7 @@ import numpy as np
 import keras
 from keras import backend as K
 from keras import optimizers
+from keras.callbacks import History
 from keras.models import Sequential
 from keras.models import load_model
 from keras.layers import Conv2D
@@ -21,6 +22,16 @@ from keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
 
 
+
+#---------------------------Declaring parameters-----------------------------------#
+
+
+img_width = 140
+img_height = 140
+batch_size = 10
+num_training_images = 33201
+num_validation_images = 4166
+learning_rate = 0.0001
 
 #---------------------------Loading the data---------------------------------------#
 print("")
@@ -41,20 +52,20 @@ validate_datagen = ImageDataGenerator(rescale = 1./255)
 test_datagen = ImageDataGenerator(rescale = 1./255)
 
 train_generator = train_datagen.flow_from_directory('data/train', 
-                                                    target_size = (140, 140), 
-                                                    batch_size = 10,
+                                                    target_size = (img_width, img_height), 
+                                                    batch_size = batch_size,
                                                     class_mode = 'categorical',
                                                     classes = categories)
 
 validation_generator = validate_datagen.flow_from_directory('data/validation',
-                                                      target_size = (140, 140),
-                                                      batch_size = 10,
+                                                      target_size = (img_width, img_height),
+                                                      batch_size = batch_size,
                                                       class_mode = 'categorical',
                                                       classes = categories)
 
 test_generator = test_datagen.flow_from_directory('data/test', 
-                                                  target_size = (140, 140),
-                                                  batch_size = 10,
+                                                  target_size = (img_width, img_height),
+                                                  batch_size = batch_size,
                                                   class_mode = 'categorical',
                                                   classes = categories)
 
@@ -75,26 +86,35 @@ network = Sequential()
 
 network.add(Conv2D(32, (3,3), input_shape = input_shape))
 network.add(Activation('relu'))
-network.add(MaxPooling2D(pool_size = (2, 2)))
-
-network.add(Conv2D(32, (3,3), input_shape = input_shape))
+network.add(Conv2D(32, (3,3)))
 network.add(Activation('relu'))
 network.add(MaxPooling2D(pool_size = (2, 2)))
+network.add(Dropout(0.15))
 
-network.add(Conv2D(64, (3,3), input_shape = input_shape))
+network.add(Conv2D(32, (3,3)))
+network.add(Activation('relu'))
+network.add(Conv2D(32, (3,3)))
 network.add(Activation('relu'))
 network.add(MaxPooling2D(pool_size = (2, 2)))
+network.add(Dropout(0.15))
+
+network.add(Conv2D(32, (3,3)))
+network.add(Activation('relu'))
+network.add(Conv2D(32, (3,3)))
+network.add(Activation('relu'))
+network.add(MaxPooling2D(pool_size = (2, 2)))
+network.add(Dropout(0.15))
 
 network.add(Flatten())
 
-network.add(Dense(64))
+network.add(Dense(1024))
 network.add(Activation('relu'))
 network.add(Dropout(0.5))
 
 
 network.add(Dense(10))
 network.add(Activation('softmax'))
-optim = optimizers.rmsprop(lr = 0.0001, decay = 1e-6)
+optim = optimizers.rmsprop(lr = learning_rate, decay = 1e-6)
 
 network.compile(loss = 'categorical_crossentropy', 
                 optimizer = optim,
@@ -104,22 +124,25 @@ network.compile(loss = 'categorical_crossentropy',
 #---------------------------Training the network-------------------------------#
 print("")
 print("training the network")
+steps_per_epoch = len(train_generator)
+validation_steps = len(validation_generator)
 model = network.fit_generator(train_generator, 
-                            steps_per_epoch = int(34155/10),
-                            epochs = 100,
+                            steps_per_epoch = steps_per_epoch,
+                            epochs = 25,
                             validation_data = validation_generator,
-                            validation_steps = int(4267/10))
+                            validation_steps = validation_steps)
 
 #---------------------------Saving the network---------------------------------#
-network.save_weights('classifier_weights.h5')
-network.save('classifier.h5')
 
+network.save_weights('classifier(deep)_weights.h5')
+network.save('classifier(deep).h5')
 
 #---------------------------Testing the network-------------------------------#
 print("testing the network")
 
 results = network.evaluate_generator(test_generator)
-
+print("The test accuracy is:", results[1])
+print("The test loss is:", results[0])
 #--------------------------Plotting Accuracy and Loss---------------------------#
 
 fig = plt.figure(figsize = (9, 3.5))
@@ -135,7 +158,7 @@ ax1.legend()
 
 ax2 = fig.add_subplot(1, 2, 2)
 ax2.plot(model.history['acc'], label = 'Training accuracy')
-ax2.plot(model.history['val_acc'], lable = 'Validation accuracy')
+ax2.plot(model.history['val_acc'], label = 'Validation accuracy')
 ax2.set_title('Training/Validation Accuracy')
 ax2.set(ylabel = 'Accuracy')
 ax2.set(xlabel = 'Epoch')
