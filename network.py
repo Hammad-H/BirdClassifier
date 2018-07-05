@@ -112,7 +112,7 @@ network.add(Activation('relu'))
 network.add(Dropout(0.5))
 
 
-network.add(Dense(10))
+network.add(Dense(13))
 network.add(Activation('softmax'))
 optim = optimizers.rmsprop(lr = learning_rate, decay = 1e-6)
 
@@ -128,14 +128,14 @@ steps_per_epoch = len(train_generator)
 validation_steps = len(validation_generator)
 model = network.fit_generator(train_generator, 
                             steps_per_epoch = steps_per_epoch,
-                            epochs = 25,
+                            epochs = 50,
                             validation_data = validation_generator,
                             validation_steps = validation_steps)
 
 #---------------------------Saving the network---------------------------------#
 
-network.save_weights('classifier(deep)_weights.h5')
-network.save('classifier(deep).h5')
+network.save_weights('classifier(deep123)_weights_50.h5')
+network.save('classifier(deep)_50.h5')
 
 #---------------------------Testing the network-------------------------------#
 print("testing the network")
