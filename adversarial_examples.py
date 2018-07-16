@@ -37,6 +37,7 @@ def generate_adversarial(file_name, original_path, original_class, categories):
                              stepsize = 0.0001,
                              return_early = False)
   if adversarial_image is None:
+    print("adversarial not found")
     return
   adverse = np.round(adversarial_image)
   original_category = categories[original_class]
@@ -49,7 +50,7 @@ def generate_adversarial(file_name, original_path, original_class, categories):
 
 #----------------creating the adversarial Model------------------------#
 keras.backend.set_learning_phase(0)
-network = load_model("classifier(new_data).h5")
+network = load_model("classifier(final).h5")
 adversarial_model = KerasModel(network, 
                               bounds = (0, 255), 
                               preprocessing = (0, 1))
@@ -68,7 +69,7 @@ for category in categories:
   if os.path.isdir(base_directory + "/" + category):
       images = os.listdir(base_directory + "/" + category)
       random.shuffle(images)
-      adversarial_originals = images[:int(len(images)*0.4)]
+      adversarial_originals = images[:int(len(images)*0.5)]
       for image in adversarial_originals:
         image_path = base_directory + "/" + category + "/" + image
         category_index = categories.index(category)

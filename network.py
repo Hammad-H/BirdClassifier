@@ -33,12 +33,14 @@ num_training_images = 33201
 num_validation_images = 4166
 learning_rate = 0.0001
 
+
+"""
 #---------------------------Loading the data---------------------------------------#
 print("")
 print("loading the data")
 categories = os.listdir("data/train")
 #ensure tha the hiddenfiles such as .DS_store are not considered categories.
-while len(categories) != 10:
+while len(categories) != 13:
   del categories[0]
 
 
@@ -72,7 +74,7 @@ test_generator = test_datagen.flow_from_directory('data/test',
 
 
 
-
+"""
 #---------------------------Construct the network-------------------------------#
 print("")
 print("constructing the network")
@@ -120,7 +122,7 @@ network.compile(loss = 'categorical_crossentropy',
                 optimizer = optim,
                 metrics = ['accuracy'])
 
-
+print(network.summary())
 #---------------------------Training the network-------------------------------#
 print("")
 print("training the network")
@@ -128,14 +130,14 @@ steps_per_epoch = len(train_generator)
 validation_steps = len(validation_generator)
 model = network.fit_generator(train_generator, 
                             steps_per_epoch = steps_per_epoch,
-                            epochs = 50,
+                            epochs = 30,
                             validation_data = validation_generator,
                             validation_steps = validation_steps)
 
 #---------------------------Saving the network---------------------------------#
 
-network.save_weights('classifier(deep123)_weights_50.h5')
-network.save('classifier(deep)_50.h5')
+network.save_weights('classifier(final)_weights.h5')
+network.save('classifier(final).h5')
 
 #---------------------------Testing the network-------------------------------#
 print("testing the network")
