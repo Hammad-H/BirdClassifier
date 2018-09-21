@@ -1,0 +1,261 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500) (preloaded format=pdflatex 2018.1.24)  13 JUL 2018 14:28
+entering extended mode
+**"./updated camera.tex"
+("updated camera.tex"
+LaTeX2e <2017-04-15>
+Babel <3.16> and hyphenation patterns for 76 language(s) loaded.
+("C:\Program Files (x86)\LaTeX\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\LaTeX\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\LaTeX\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\LaTeX\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\LaTeX\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\LaTeX\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\LaTeX\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\LaTeX\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Program Files (x86)\LaTeX\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files (x86)\LaTeX\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+("C:\Program Files (x86)\LaTeX\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files (x86)\LaTeX\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@tempdima=\dimen108
+\caption@indent=\dimen109
+\caption@parindent=\dimen110
+\caption@hangindent=\dimen111
+)
+\c@ContinuedFloat=\count87
+)
+\c@KVtest=\count88
+\sf@farskip=\skip43
+\sf@captopadj=\dimen112
+\sf@capskip=\skip44
+\sf@nearskip=\skip45
+\c@subfigure=\count89
+\c@subfigure@save=\count90
+\c@lofdepth=\count91
+\c@subtable=\count92
+\c@subtable@save=\count93
+\c@lotdepth=\count94
+\sf@top=\skip46
+\sf@bottom=\skip47
+)
+("C:\Program Files (x86)\LaTeX\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen113
+\extrarowheight=\dimen114
+\NC@list=\toks15
+\extratabsurround=\skip48
+\backup@length=\skip49
+)
+No file "updated camera".aux.
+\openout1 = `"updated camera.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+("C:\Program Files (x86)\LaTeX\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count95
+\scratchdimen=\dimen115
+\scratchbox=\box26
+\nofMPsegments=\count96
+\nofMParguments=\count97
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count98
+\MPscratchDim=\dimen116
+\MPnumerator=\count99
+\makeMPintoPDFobject=\count100
+\everyMPtoPDFconversion=\toks17
+) ("C:\Program Files (x86)\LaTeX\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files (x86)\LaTeX\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\LaTeX\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files (x86)\LaTeX\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Program Files (x86)\LaTeX\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Program Files (x86)\LaTeX\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files (x86)\LaTeX\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files (x86)\LaTeX\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files (x86)\LaTeX\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files (x86)\LaTeX\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files (x86)\LaTeX\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 21.
+
+
+LaTeX Warning: Citation `BIRDID:Berg2013' on page 1 undefined on input line 37.
+
+
+
+LaTeX Warning: Reference `table:cameras' on page 1 undefined on input line 54.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 59.
+[1{C:/Users/Hammad/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+
+LaTeX Warning: Reference `table:species' on page 2 undefined on input line 113.
+
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 119.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 119.
+
+LaTeX Warning: Reference `fig:TypicalImages' on page 2 undefined on input line 
+136.
+
+<images/typical.jpg, id=12, 1541.76pt x 1156.32pt>
+File: images/typical.jpg Graphic file (type jpg)
+<use images/typical.jpg>
+Package pdftex.def Info: images/typical.jpg  used on input line 140.
+(pdftex.def)             Requested size: 108.405pt x 81.30354pt.
+<images/bright.jpg, id=13, 1541.76pt x 1156.32pt>
+File: images/bright.jpg Graphic file (type jpg)
+<use images/bright.jpg>
+Package pdftex.def Info: images/bright.jpg  used on input line 142.
+(pdftex.def)             Requested size: 108.405pt x 81.30354pt.
+
+Overfull \hbox (0.69336pt too wide) in paragraph at lines 140--143
+ [][]|  [] 
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 152--153
+ \OT1/cmr/bx/n/10.95 Con-vo-lu-tional neu-ral net-work ar-chi-tec-
+ []
+
+[2 <./images/typical.jpg> <./images/bright.jpg>]
+No file "updated camera".bbl.
+[3
+
+] ("updated camera.aux")
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2802 strings out of 493303
+ 44154 string characters out of 3138254
+ 107757 words of memory out of 3000000
+ 6345 multiletter control sequences out of 15000+200000
+ 9457 words of font info for 33 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 44i,9n,49p,285b,343s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/LaTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/P
+rogram Files (x86)/LaTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
+Files (x86)/LaTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x
+86)/LaTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/LaTe
+X/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/LaTeX/fonts/
+type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/LaTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/LaTeX/fonts/type1/public/amsf
+onts/cm/cmti10.pfb>
+Output written on "updated camera.pdf" (3 pages, 1648514 bytes).
+PDF statistics:
+ 46 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+

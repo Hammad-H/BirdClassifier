@@ -1,0 +1,118 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Berg%
+\ \BBA {} Belhumeur%
+}{%
+Berg%
+\ \BBA {} Belhumeur%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+berg2013you}
+\APACinsertmetastar {%
+berg2013you}%
+\begin{APACrefauthors}%
+Berg, T.%
+\BCBT {}\ \BBA {} Belhumeur, P\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {How do you tell a blackbird from a crow?} {How do you
+  tell a blackbird from a crow?}{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the IEEE International Conference on
+  Computer Vision} {Proceedings of the ieee international conference on
+  computer vision}\ (\BPGS\ 9--16).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kurakin%
+, Goodfellow%
+\BCBL {}\ \BBA {} Bengio%
+}{%
+Kurakin%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+kurakin2016adversarial}
+\APACinsertmetastar {%
+kurakin2016adversarial}%
+\begin{APACrefauthors}%
+Kurakin, A.%
+, Goodfellow, I.%
+\BCBL {}\ \BBA {} Bengio, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Adversarial machine learning at scale} {Adversarial
+  machine learning at scale}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1611.01236}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Madry%
+, Makelov%
+, Schmidt%
+, Tsipras%
+\BCBL {}\ \BBA {} Vladu%
+}{%
+Madry%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+madry2017towards}
+\APACinsertmetastar {%
+madry2017towards}%
+\begin{APACrefauthors}%
+Madry, A.%
+, Makelov, A.%
+, Schmidt, L.%
+, Tsipras, D.%
+\BCBL {}\ \BBA {} Vladu, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Towards deep learning models resistant to adversarial
+  attacks} {Towards deep learning models resistant to adversarial
+  attacks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1706.06083}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rauber%
+, Brendel%
+\BCBL {}\ \BBA {} Bethge%
+}{%
+Rauber%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+rauber2017foolbox}
+\APACinsertmetastar {%
+rauber2017foolbox}%
+\begin{APACrefauthors}%
+Rauber, J.%
+, Brendel, W.%
+\BCBL {}\ \BBA {} Bethge, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Foolbox v0. 8.0: A python toolbox to benchmark the
+  robustness of machine learning models} {Foolbox v0. 8.0: A python toolbox to
+  benchmark the robustness of machine learning models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1707.04131}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
